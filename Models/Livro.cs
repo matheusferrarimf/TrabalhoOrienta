@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace BibliotecaVirtual.Models
 {
     public class Livro
@@ -9,6 +11,8 @@ namespace BibliotecaVirtual.Models
         public bool Disponivel { get; set; } = true;
 
         public int CategoriaId { get; set; }
+
+        [JsonIgnore]
         public Categoria? Categoria { get; set; }
     }
 }

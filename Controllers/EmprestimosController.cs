@@ -66,7 +66,7 @@ namespace BibliotecaVirtual.Controllers
             if (emprestimo.Livro == null)
                 return BadRequest("Livro não encontrado para este empréstimo.");
 
-            emprestimo.DataDevolucao = DateTime.Now;
+            emprestimo.DataDevolucao = DateTime.UtcNow;
             emprestimo.Livro.Disponivel = true;
 
             await _context.SaveChangesAsync();

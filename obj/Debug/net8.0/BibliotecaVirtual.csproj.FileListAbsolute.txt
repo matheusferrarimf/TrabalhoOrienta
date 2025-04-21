@@ -133,3 +133,4 @@
 /home/papamovel/BibliotecaVirtual/BibliotecaVirtual/obj/Debug/net8.0/BibliotecaVirtual.pdb
 /home/papamovel/BibliotecaVirtual/BibliotecaVirtual/obj/Debug/net8.0/BibliotecaVirtual.genruntimeconfig.cache
 /home/papamovel/BibliotecaVirtual/BibliotecaVirtual/obj/Debug/net8.0/ref/BibliotecaVirtual.dll
+/home/papamovel/BibliotecaVirtual/BibliotecaVirtual/obj/Debug/net8.0/BibliotecaVirtual.sourcelink.json
