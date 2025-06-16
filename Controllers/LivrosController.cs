@@ -48,7 +48,16 @@ namespace BibliotecaVirtual.Controllers
             if (id != livro.Id)
                 return BadRequest();
 
-            _context.Entry(livro).State = EntityState.Modified;
+            var livroExistente = await _context.Livros.FindAsync(id);
+            if (livroExistente == null)
+                return NotFound();
+
+            // Atualiza os campos
+            livroExistente.Titulo = livro.Titulo;
+            livroExistente.Genero = livro.Genero;
+            livroExistente.Disponivel = livro.Disponivel;
+            livroExistente.Autor = livro.Autor; // Agora é string
+            livroExistente.CategoriaId = livro.CategoriaId;
 
             try
             {
@@ -64,6 +73,8 @@ namespace BibliotecaVirtual.Controllers
 
             return NoContent();
         }
+
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLivro(int id)
